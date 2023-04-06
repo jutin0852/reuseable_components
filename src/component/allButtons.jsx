@@ -5,7 +5,7 @@ export default function AllButtons() {
   return (
     <div>
       <h1>Buttons</h1>
-      <Button variant="default" style={{ color: "black" }} type="">
+      <Button variant="default" type="">
         Default
       </Button>
       <Button variant="outline" type="variant='outline'">
@@ -46,12 +46,7 @@ export default function AllButtons() {
       <Button variant="default" color="primary" size="lg" type="size='lg'">
         Default
       </Button>
-      <Button
-        variant="default"
-        size="md"
-        style={{ color: "black" }}
-        type="color='default'"
-      >
+      <Button variant="default" size="md" type="color='default'">
         Default
       </Button>
       <Button
