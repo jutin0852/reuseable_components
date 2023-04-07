@@ -87,18 +87,39 @@ input {
   height: 56px;
   width: 200px;
   border-radius: 8px;
-  border: 1px solid #828282;
   outline: none;
   
-  
 }
-input:hover {
+/* default input */
+.defaultInput{
+    border: 1px solid #828282;
+
+}
+.defaultInput:hover ,.error:hover {
   border: 1px solid black;
 }
-input:focus {
+.defaultInput:focus {
   border: 1px solid #2962ff;
 
 }
 input:focus + label {
  color:  #2962ff;
+}
+
+
+/* error input */
+.error + label{
+ color: red;
+ 
+}
+
+.error,.error:focus {
+    border: 1px solid red;
+}
+.error:hover + label{
+  color: black;
+}
+.error:focus + label{
+ color: red;
+ 
 }

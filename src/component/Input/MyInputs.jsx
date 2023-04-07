@@ -4,7 +4,28 @@ import Input from "./Input";
 export default function MyInputs() {
   return (
     <div>
-      <Input label="label" type="text" placeholder="placeholder" name="label"/>
+      <Input
+        label="Label"
+        type="text"
+        placeholder="placeholder"
+        name="label"
+        variant="defaultInput"
+      />
+      <Input
+        label="Label"
+        type="text"
+        placeholder="placeholder"
+        name="label"
+        variant="defaultInput"
+        error="error"
+      />
+      <Input
+        label="Label"
+        type="text"
+        placeholder="placeholder"
+        name="label"
+        disabled
+      />
     </div>
   );
 }
