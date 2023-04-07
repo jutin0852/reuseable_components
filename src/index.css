@@ -81,45 +81,50 @@ button {
   text-align: left;
   display: flex;
   flex-direction: column-reverse;
-  
 }
 input {
   height: 56px;
   width: 200px;
   border-radius: 8px;
   outline: none;
-  
 }
 /* default input */
-.defaultInput{
-    border: 1px solid #828282;
-
+.defaultInput {
+  border: 1px solid #828282;
+  /* background-color: #0039cb; 
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  padding-left: 40px; */
 }
-.defaultInput:hover ,.error:hover {
+.defaultInput:hover,
+.error input:hover {
   border: 1px solid black;
 }
 .defaultInput:focus {
   border: 1px solid #2962ff;
-
 }
 input:focus + label {
- color:  #2962ff;
+  color: #2962ff;
 }
-
 
 /* error input */
-.error + label{
- color: red;
- 
+.error input + label {
+  color: red;
 }
 
-.error,.error:focus {
-    border: 1px solid red;
+.error input,
+.error input:focus {
+  border: 1px solid red;
 }
-.error:hover + label{
+.error input:hover + label {
   color: black;
 }
-.error:focus + label{
- color: red;
- 
+.error input:focus + label {
+  color: red;
+}
+.input.error p {
+  color: red;
+}
+.input p {
+  color: #828282;
 }

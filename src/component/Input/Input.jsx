@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 
-export default function Input({label,name,error,variant,...props}) {
+export default function Input({label,name,error,variant,someText,...props}) {
   const [text , setText] = useState('');
   return (
-    <div className="input">
+    <div className={`input ${error}`} >
+      <p>{someText}</p>
       <input
-        className={`${error} ${variant}`}
+        className={` ${variant}`}
         {...props}
         value={text}
         onChange={(e) => {
