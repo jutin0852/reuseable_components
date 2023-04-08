@@ -1,12 +1,12 @@
 import React from "react";
-import AllButtons from "./component/allButtons";
+import AllButtons from "./component/button/allButtons";
 import MyInputs from "./component/Input/MyInputs";
 
 function App() {
-
   return (
     <div>
-      {/* <AllButtons /> */}
+      <AllButtons />
+      <br />
       <MyInputs />
     </div>
   );
