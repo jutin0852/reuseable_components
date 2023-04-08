@@ -22,7 +22,8 @@ button {
   /* margin-top: 20px; */
 }
 
-.default:hover, .default:active {
+.default:hover,
+.default:active {
   background: #aeaeae;
 }
 .outline {
@@ -61,16 +62,98 @@ button {
   background: #2962ff;
   color: white;
 }
-.primary:hover{
-  background: #0039CB;
-
+.primary:hover {
+  background: #0039cb;
 }
-.secondary{
-  background: #455A64;
+.secondary {
+  background: #455a64;
   color: white;
-
 }
-.secondary:hover{
-  background: #1C313A;
+.secondary:hover {
+  background: #1c313a;
+}
+.input {
+  font-family: Noto Sans JP;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
+  letter-spacing: 0em;
+  text-align: left;
+  display: flex;
+  flex-direction: column-reverse;
+  position: relative;
+  width: 200px;
+}
+input {
+  height: 56px;
+  width: inherit;
+  border-radius: 8px;
+  outline: none;
+  font-size: 14px;
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+/* default input */
+.defaultInput {
+  border: 1px solid #828282;
+}
+.defaultInput:hover,
+.error input:hover {
+  border: 1px solid black;
+}
+.defaultInput:focus {
+  border: 1px solid #2962ff;
+}
+input:focus + label {
+  color: #2962ff;
+}
 
+/* error input */
+.error input + label {
+  color: red;
+}
+
+.error input,
+.error input:focus {
+  border: 1px solid red;
+}
+.error input:hover + label {
+  color: black;
+}
+.error input:focus + label {
+  color: red;
+}
+.input.error p {
+  color: red;
+}
+.input p {
+  color: #828282;
+  margin: 7px;
+}
+.icon input {
+  padding-left: 35px;
+}
+.startIcon,
+.endIcon {
+  width: 25px;
+  position: absolute;
+  top: 27px;
+  padding: 7px;
+}
+.endIcon {
+  right: 0px;
+}
+.smInput {
+  height: 70px;
+  width: 200px;
+}
+.mdInput {
+  width: 200px;
+}
+.fullWidth {
+  width: 1031px;
+}
+textarea{
+  padding: 10px;
+  border-radius: 8px;
 }
