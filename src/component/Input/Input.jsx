@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React from "react";
+import inputCss from './inputCss.module.css';
 
 export default function Input({
   label,
@@ -15,19 +16,20 @@ export default function Input({
 }) {
   if (multiline) {
     return (
-      <div className={`input `}>
+      <div className={inputCss.input}>
         <textarea rows={row} {...props}></textarea>
-        <label htmlFor={name}>{label}</label>
+        <label htmlFor={name}> {label}</label>
       </div>
     );
   }
   return (
-    <div className={`input ${startIcon && "icon"} ${error} ${size}`}>
+    <div className={`${inputCss.input} ${startIcon && inputCss.icon} ${error} ${size}`}>
       <p>{someText}</p>
-      <img className="startIcon" src={startIcon} alt={startIcon} />
-      <img className="endIcon" src={endIcon} alt="" />
-      <input className={` ${variant} `} {...props} />
+      <img className={inputCss.startIcon} src={startIcon} alt={startIcon} />
+      <img className={inputCss.endIcon} src={endIcon} alt="" />
+      <input className={variant} {...props} />
       <label htmlFor={name}>{label}</label>
     </div>
   );
 }
+g

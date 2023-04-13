@@ -1,6 +1,5 @@
 import React from "react";
 
-
 export default function Button({
   children,
   variant,
@@ -14,14 +13,13 @@ export default function Button({
   return (
     <div>
       <p>{`<Button ${type} />`}</p>
-      <button {...props} className={`${variant} ${size} ${color}`}>
-        <span>
-          <img className="Icon" src={`/images/${startIcon}`} alt="" />
-        </span>
-        {children}
-        <span>
-          <img className="Icon" src={`/images/${endIcon}`} alt="" />
-        </span>
+      <button
+        {...props}
+        className={`${variant} ${size} ${color}`}
+      >
+        <span>{startIcon}</span>
+        <span className="children">{children}</span>
+        <span>{endIcon}</span>
       </button>
     </div>
   );
